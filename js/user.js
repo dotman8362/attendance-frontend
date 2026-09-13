@@ -115,7 +115,7 @@ function showMessage(message, type) {
 }
 document.getElementById('confirmLogout').addEventListener('click', async function () {
   try {
-    const response = await fetch('/api/logout', {
+    const response = await fetch('https://attendance-backend-6kev.onrender.com/api/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -283,7 +283,7 @@ document.getElementById('profileForm').addEventListener('submit', async function
       };
       //   waiting for backend logic
       try {
-        const response = await fetch('/api/user/profile', {
+        const response = await fetch('https://attendance-backend-6kev.onrender.com/api/user/profile', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -381,7 +381,7 @@ document.getElementById('markAttendanceForm').addEventListener('submit', async f
       };
 
       try {
-        const response = await fetch('/api/user/mark-attendance', {
+        const response = await fetch('https://attendance-backend-6kev.onrender.com/api/user/mark-attendance', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
