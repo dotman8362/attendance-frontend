@@ -107,7 +107,7 @@ markBtn.addEventListener('click', async () => {
         console.log(latitude)
         console.log(longitude)
 
-        const res = await fetch('api/attendance/', {
+        const res = await fetch('https://attendance-backend-6kev.onrender.com/api/attendance/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json',
                 "Authorization": `Bearer ${localStorage.getItem("token")
@@ -140,7 +140,7 @@ markBtn.addEventListener('click', async () => {
 // Fetch attendance records
 async function fetchAttendanceRecords() {
     try {
-        const res = await fetch("/api/attendance/record", {
+        const res = await fetch("https://attendance-backend-6kev.onrender.com/api/attendance/record", {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
