@@ -93,7 +93,7 @@ document.getElementById('logoutModal').addEventListener('click', function(event)
 }
 document.getElementById('confirmLogout').addEventListener('click', async function() {
   try {
-    const response = await fetch('/api/logout', {
+    const response = await fetch('https://attendance-backend-6kev.onrender.com/api/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -266,7 +266,7 @@ function addActionListeners() {
       if (confirm(`Are you sure you want to delete user ${id}?`)) {
         try {
           // Simulate delete API call
-          fetch(`/api/users/${id}`, {
+          fetch(`https://attendance-backend-6kev.onrender.com/api/users/${id}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
@@ -298,7 +298,7 @@ loadSectionData('dashboard');
 
    async function fetchStudents() {
       const token = localStorage.getItem("adminToken");
-      const res = await fetch("/api/admin/students", {
+      const res = await fetch("https://attendance-backend-6kev.onrender.com/api/admin/students", {
         headers: { "Authorization": `Bearer ${token}` }
       });
 
