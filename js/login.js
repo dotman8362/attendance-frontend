@@ -61,7 +61,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
                 password: password.value.trim()
             };
 
-            const response = await fetch('/api/auth/login', {
+            const response = await fetch('https://attendance-backend-6kev.onrender.com/api/auth/login', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
